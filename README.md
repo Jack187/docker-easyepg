@@ -1,4 +1,4 @@
-# [docker-easyepg](https://github.com/mod242/docker-easyepg)
+# [docker-easyepg](https://github.com/jack187/docker-easyepg)
 
 This Image is based on the Work of linuxserver's webgrabplus container (https://github.com/linuxserver/docker-webgrabplus)
 
@@ -29,7 +29,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | :----: | --- |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
-| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
+| `-e TZ=Europe/Berlin` | Specify a timezone to use EG Europe/Berlin |
 | `-v /easyepg` | Where easyepg should be stored (including config and resulting xml). |
 
 ## User / Group Identifiers
@@ -90,7 +90,7 @@ The Container updates to the most recent version of EasyEPG when restartet
 
 To build the image locally do the following: 
 ```
-git clone https://github.com/mod242/docker-easyepg.git
+git clone https://github.com/jack187/docker-easyepg.git
 cd docker-easyepg
 docker build \
   --no-cache \
