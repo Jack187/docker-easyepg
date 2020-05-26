@@ -16,6 +16,7 @@ docker create \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
+  -e "XML_FILENAME_PATTERN=*combined*.xml"
   -v <path to easyepg>:/easyepg \
   --mount type=bind,source=/path/to/xmltv.sock,target=/xmltv.sock \
   --restart unless-stopped \
@@ -31,6 +32,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/Berlin` | Specify a timezone to use EG Europe/Berlin |
+| `-e "XML_FILENAME_PATTERN=*combined*.xml"` | Matching xml result files are written to the (optional) xmltv.sock. |
 | `-v /easyepg` | Where easyepg should be stored (including config and resulting xml). |
 | `--mount /xmltv.sock` | Socket where the resulting xml is written to (e.g. tvheadend xmltv.sock) (optional). |
 
