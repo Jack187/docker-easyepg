@@ -32,7 +32,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/Berlin` | Specify a timezone to use EG Europe/Berlin |
-| `-e "XML_FILENAME_PATTERN=*combined*.xml"` | Matching xml result files are written to the (optional) xmltv.sock. |
+| `-e "XML_FILENAME_PATTERN=*combined*.xml"` | Matching xml result files are written to the (optional) xmltv.sock (optional). |
 | `-v /easyepg` | Where easyepg should be stored (including config and resulting xml). |
 | `--mount /xmltv.sock` | Socket where the resulting xml is written to (e.g. tvheadend xmltv.sock) (optional). |
 
