@@ -30,7 +30,7 @@ RUN cpanm install DateTime::Format::DateParse
 RUN cpanm install utf8
 RUN cpanm install DateTime::Format::Strptime
 RUN mkdir -p /easyepg
-RUN touch /xmltv.sock
+RUN mkdir -p /sockets
 RUN apt-get remove --purge -qy build-essential
 RUN apt-get -qy autoclean
 RUN apt-get -qy clean
@@ -42,3 +42,4 @@ COPY root/ /
 
 # ports and volumes
 VOLUME /easyepg
+VOLUME /sockets
